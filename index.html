@@ -391,7 +391,7 @@
             <!-- ДЗ 6 -->
             <!-- Форма в модальному вікні -->
             <p class="modal-form-title">Залиште свої дані, ми вам передзвонимо</p>
-            <form autocomplete="off">
+            <form class="modal-main-form" autocomplete="off">
                 <div class="input-area">
                     <label class="form-label" for="name">Ім'я
                         <input class="form-input" name="name" type="text" id="name" required minlength="3" maxlength="20" >
@@ -416,17 +416,22 @@
                         </svg>
                     </label>
                 </div>
-                <label class="form-label" for="comment">Коментар
+                <div class="input-area">
+                    <label class="form-label" for="comment">Коментар
                     <textarea class="form-text-area" id="comment" placeholder="Введіть текст"></textarea>
                 </label>
-                <label class="privacy">
-                    <input class="privacy-input" type="checkbox" name="privacy" />
-                    <span class="privacy-wrapp">
-                        <svg class="modal-check" width="16" height="15">
-                            <use href="./images/sptite3.svg#modal-check"></use>
-                        </svg>
-                    </span>
-                </label>
+                </div>
+                <div class="accept">
+                    <label class="privacy" >Погоджуюся з розсилкою та приймаю 
+                        <input class="privacy-input" type="checkbox" name="privacy" />
+                        <span class="privacy-wrapp">
+                            <svg class="modal-check" width="16" height="15">
+                                <use href="./images/sptite3.svg#modal-check"></use>
+                            </svg>
+                        </span>
+                    </label>
+                    <a href="/">Умови договору</a>
+                </div>
                 <button class="btn-blue" type="submit">Відправити</button>
             </form>
             <!-- Кінець форми в модальному вікні -->
