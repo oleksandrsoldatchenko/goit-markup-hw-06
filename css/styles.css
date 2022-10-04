@@ -377,6 +377,10 @@ body {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-input:focus {
+    border-color: var(--accent-text-color);
+}
+
 .modal-icon {
     position: absolute;
     left: 12px;
@@ -385,9 +389,14 @@ body {
     width: 18px;
     height: 18px;
 
+    fill: var(--title-text-colour);
     cursor: pointer;
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus + .modal-icon {
+    fill: var(--accent-text-color);
 }
 
 .form-text-area {
@@ -406,30 +415,59 @@ body {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-text-area:focus {
+    border-color: var(--accent-text-color);
+}
+
+.form-text-area::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-text-area:focus::placeholder {
+    color: var(--accent-text-color);
+}
+
 .accept {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 20px;
     margin-bottom: 30px;
-
-
 }
 
 .privacy {
     line-height: 1.71;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
     margin-right: 4px;
 }
 
-privacy-input
-privacy-wrapp
+.privacy-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    bottom: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.privacy-wrapp {
+    width: 16px;
+    height: 15px;
+}
 
 .modal-check {
     fill: transparent;
     border: 2px solid var(--title-text-colour);
+    border-radius: 2px;
+    margin-right: 8px;
+}
+
+.privacy-input:checked + .privacy .modal-check {
+    border: none;
+    fill: var(--accent-text-color);
 }
 
 .form-link {
