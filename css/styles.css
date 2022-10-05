@@ -439,7 +439,6 @@ body {
 
 .privacy {
     line-height: 1.71;
-    margin-right: 4px;
 }
 
 .privacy-input {
@@ -456,6 +455,7 @@ body {
 .privacy-wrapp {
     width: 16px;
     height: 15px;
+    margin-right: 4px;
 }
 
 .modal-check {
@@ -463,6 +463,7 @@ body {
     border: 2px solid var(--title-text-colour);
     border-radius: 2px;
     margin-right: 8px;
+    vertical-align: middle;
 }
 
 .privacy-input:checked + .privacy .modal-check {
